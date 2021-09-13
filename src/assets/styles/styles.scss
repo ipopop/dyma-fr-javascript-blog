@@ -20,8 +20,40 @@ header, .content, footer {
 }
 
 header {
+  background: var(--accent);
   grid-area: header;
-  background: var(--bg);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: var(--light);
+      &:hover {
+        color: var(--dark);
+      }
+  }
+
+  .activ {
+    color: var(--primary);
+  }
+  
+  .header-brand {
+    font-size: 3.3rem;
+    font-weight: 700;
+    color: var(--primary);
+
+  }
+  
+  ul {
+    display: flex;
+    li {
+      .header-nav {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+      }
+    }
+  }
 }
 
 .content {
@@ -31,6 +63,7 @@ header {
 
 footer {
   grid-area: footer;
-  color: var(--bg);
+  color: var(--light);
   background: var(--text);
+  text-align: center;
 }
