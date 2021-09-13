@@ -16,11 +16,11 @@
 }
 
 header, .content, footer {
-  padding: 2rem;
+  padding: 1.67rem;
 }
 
 header {
-  background: var(--accent);
+  background: var(--dark-acc);
   grid-area: header;
   display: flex;
   flex-flow: row nowrap;

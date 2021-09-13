@@ -9,7 +9,41 @@
   <title>Form</title>
 </head>
 <body>
-    <a href="./index.html">Accueil</a>
-    <img src="./assets/img/proto.jpg" alt="proto" width="300">
+  <div class="container">
+    <header>
+      <a href="./index.html" class="header-brand">Blog</a>
+      <ul>
+        <li>
+          <a href="./index.html" class="header-nav">Home</a>
+        </li>
+        <li>
+          <a href="./form.html" class="header-nav activ">Add Article</a>
+        </li>
+      </ul>
+    </header>
+    <div class="content">
+      <form>
+        <h2 class="title">Add Article</h2>
+        <div class="form-group">
+          <label>Author</label>
+          <input type="text" name="author" >
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <input type="text" name="category" >
+        </div>
+        <div class="form-group">
+          <label>Article</label>
+          <textarea type="text" name="article"></textarea>
+        </div>
+
+        <div class="form-btn-container">
+          <button class="btn btn-secondary">Cancel</button>
+          <button class="btn btn-primary">Add</button>
+        </div>
+      </form>
+    </div>
+    <footer>© blog</footer>
+  </div>
 </body>
 </html>

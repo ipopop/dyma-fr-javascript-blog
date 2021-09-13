@@ -1,14 +1,18 @@
 :root {
   --bg-light: white;
-  --bg: #f7f7f7;
-  --light: #eff2f5;
-  --border: #ddd;
-  --primary: #2ecc71;
+  --bg: #fcfcfc;
+  --light: #f4f5f6;
+  --border: #e9e9e9;
+  --prim-light: #95e5b7;
+  --primary: #45d481;
   --dark: #27ae60;
-  --accent: #2c3e50;
-  --text: #393c3f;
+  --accent: #899bac;
+  --acc-2: #b7cadd;
+  --dark-acc: #485766;
+  --text: #414346;
   --font-family: 'Muli', Arial, sans-serif;
-  --box-shadow: 10px 10px 10px #eee, -10px -10px 10px #fff;
+  --box-shadow: 10px 10px 10px rgb(238, 238, 238), -10px -10px 10px rgba(255, 255, 255, 0.5);
+  --btn-shadow: 5px 5px 5px rgb(238, 238, 238), -5px -5px 5px rgba(255, 255, 255, 0.5);
 }
 
 @font-face{ 
