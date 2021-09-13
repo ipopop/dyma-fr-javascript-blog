@@ -1,0 +1,14 @@
+:root {
+  --primary: #2ecc71;
+  --dark: #27ae60;
+  --accent: #2c3e50;
+  --text: #333;
+  --divider: #ecf0f1;
+  --font-family: 'Muli', Arial, sans-serif;
+  --box-shadow: 10px 10px 10px #eee, -10px -10px 10px #fff;
+}
+
+@font-face{ 
+	font-family: 'Muli';
+	src: url('../fonts/muli/Muli.ttf') format('truetype');
+}

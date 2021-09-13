@@ -1,5 +1,6 @@
 'use strict'
 
-import "./style.scss"
+import "./assets/styles/styles.scss"
+import "./index.scss"
 
-console.log("accueil")
+console.log("index")
