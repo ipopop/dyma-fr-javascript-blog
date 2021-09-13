@@ -1,0 +1,49 @@
+.articles {
+  margin: 5rem 0;
+  align-items: center;
+
+  .article-box {    
+    display: flex;
+    margin-bottom: 7rem;
+    flex-direction: column;
+    align-items: center;
+    
+    img {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      margin-top: -3rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0;
+      color: var(--primary);
+    }
+
+    .article-author {
+      color: var(--accent);
+      margin-bottom: .5rem;
+      font-style: italic;
+    }
+
+    .article-content {
+      max-width: 550px;
+      white-space: pre-line;
+      margin-bottom: .5rem;
+    }
+
+    .article-actions {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid var(--divider);
+
+      .btn {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

@@ -1,5 +1,13 @@
+.content {
+  grid-area: content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light);
+}
+
 .title {
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
   border-bottom: 2px solid var(--border);
   color: var(--primary);
 }
@@ -7,7 +15,7 @@
 .btn {
   border: 2px solid var(--border);
   border-radius: .5rem;
-  padding: 1rem 2rem;
+  padding: .8rem 1.8rem;
   font-weight: 700;
   cursor: pointer;
   background: var(--bg);
@@ -19,10 +27,17 @@
   }
 }
 
+.btn-container {
+  width: 100%;
+  text-align: right;
+  margin: .5rem 1rem;
+}
+
 .btn-primary {
   color: var(--bg);
   background: var(--primary);
-  padding: 1rem 3rem;
+  padding: .8rem 3rem;
+  border-color: var(--prim-light);
   &:hover {
     color: var(--bg-light);
     border-color: var(--primary);
@@ -30,5 +45,31 @@
 }
 
 .btn-secondary {
-  color: var(--accent);
+  color: var(--acc-1);
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.btn-danger {
+  color: var(--danger);
+  border-color: var(--danger-light);
+  &:hover {
+    color: var(--error);
+    border-color: var(--error);
+  }
+}
+
+.card {
+  background: var(--light);
+  min-width: 30rem;
+  width: 67vw;
+  max-width: 60rem;
+  margin: 3rem 1rem;
+  padding: 1.25rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
 }

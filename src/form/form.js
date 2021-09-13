@@ -7,24 +7,22 @@ const form = document.querySelector('form')
 const errorElement = document.querySelector('#errors')
 let errors = []
 
-// form.addEventListener('submit', asyncevent => {
-form.addEventListener('submit', event => {
+form.addEventListener('submit', async event => {
   event.preventDefault()
   const formData = new FormData(form)
   const article = Object.fromEntries(formData.entries())
   if (formIsValid(article)) {
     try {
       const json = JSON.stringify(article)
-      // const response = await fetch("https://restapi.fr/api/article", {
-      //   method: "POST",
-      //   body: json,
-      //   headers: {
-      //     "Content-Type": "application/json"
-      //   }
-      // })
-      // const body = await response.json()
-      // console.log(body)
-      console.log(json)
+      const response = await fetch("https://restapi.fr/api/newArticle", {
+        method: "POST",
+        body: json,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      const body = await response.json();
+      console.log(body);
     } catch (e) {
       console.error("e : ", e)
     }
@@ -50,7 +48,9 @@ form.addEventListener('submit', event => {
 const formIsValid = article => {
   if (
     !article.author ||
+    !article.imgAuthor ||
     !article.category ||
+    !article.title ||
     !article.content
   ) {
     errors = []

@@ -22,22 +22,30 @@
       </ul>
     </header>
     <div class="content">
-      <form>
+      <form class="card">
         <h2 class="title">Add New Article</h2>
         <div class="form-group">
           <label>Author</label>
           <input type="text" name="author" >
         </div>
         <div class="form-group">
+          <label>Author Image Link</label>
+          <input type="text" name="imgAuthor" >
+        </div>
+        <div class="form-group">
           <label>Category</label>
           <input type="text" name="category" >
+        </div>
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" name="title" >
         </div>
         <div class="form-group">
           <label>Article</label>
           <textarea type="text" name="content"></textarea>
         </div>
         <ul id="errors"></ul> 
-        <div class="form-btn-container">
+        <div class="btn-container">
           <button class="btn btn-secondary">Cancel</button>
           <button class="btn btn-primary">Add</button>
         </div>
