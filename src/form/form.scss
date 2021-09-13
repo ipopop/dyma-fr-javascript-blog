@@ -46,4 +46,10 @@
       text-align: right;
     }
   }
+  #errors {
+    color: var(--errors);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
 }
