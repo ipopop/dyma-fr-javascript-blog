@@ -15,6 +15,7 @@ const createArticle = articles => {
   <h2>${article.title}</h2>
   <p class="article-author">${article.author} - ${article.category}</p>
   <p class="article-content">${article.content}</p>
+  <p class="article-date">last update : ${dateArticle(article)}</p>
   <div class="btn-container">
     <button class="btn btn-danger" data-id=${article._id} >Delete</button>
     <button class="btn btn-primary">Modify</button>
@@ -43,7 +44,9 @@ const deleteArticle = async () => {
         )
         const body = await response.json()
         console.log(body)
-        fetchArticle()
+        setTimeout(() => {
+          location.reload()
+        }, 500)
       } catch (e) {
         console.log("e : ", e)
       }
@@ -60,5 +63,17 @@ const fetchArticle = async () => {
     console.log("e : ", e)
   }
 }
-
 fetchArticle()
+
+const dateArticle = (article) => {
+  const newDate = new Date(article.createdAt)
+  .toLocaleString(
+    'fr-FR', {
+      weekday: 'short',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    }
+  )
+  return newDate
+}
