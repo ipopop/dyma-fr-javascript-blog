@@ -8,28 +8,33 @@
   display: flex;
   flex-direction: row;
   padding: 2rem;
+  color: var(--text-light);
+
   select {
-    display: none;
-    width: 10rem;
-    height: 6rem;
+    width: 12rem;
+    height: 5rem;
+    padding: 1rem 2rem;
     margin-bottom: 2rem;
     margin-right: 2rem;
-    border-radius: 1rem;
     background: white;
-    border: 0;
-    outline: 0;
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
+    font-family: inherit;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--btn-shadow);
   }
+
   .categories {
     width: 20rem;
-    padding: 2rem 0;
+    padding: 0.7rem 0;
     background: white;
     border-radius: 1rem;
     border: 1px solid var(--border);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--btn-shadow);
     li {
-      padding: 0.7rem 3rem;
+      padding: 0.7rem 2rem;
       transition: color 0.2s;
       cursor: pointer;
       &:hover {
@@ -40,7 +45,7 @@
         }
       }
     }
-    .active {
+    .activ {
       color: var(--primary);
       font-weight: 700;
       strong {

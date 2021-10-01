@@ -5,8 +5,15 @@ import "./index.scss"
 
 const newArticle = document.querySelector(".articles")
 const catMenuElem = document.querySelector(".categories")
+const selectMenuElem = document.querySelector("select")
 let filter
 let articles
+let sortBy = 'desc'
+
+selectMenuElem.addEventListener('change', () => {
+  sortBy = selectMenuElem.value
+  fetchArticle()
+})
 
 const createArticle = () => {
   const articlesDOM = articles.filter(article => {
@@ -83,9 +90,21 @@ const displayMenuCategories = catArr => {
   const liElem = catArr.map(catElem => {
     const newLi = document.createElement('li')
     newLi.innerHTML = `${catElem[0]} <strong>${catElem[1]}</strong>`
+    if (catElem[0] === filter) {
+      newLi.classList.add('activ')
+    }
     newLi.addEventListener('click', () => {
-      filter = catElem[0]
-      console.log('onClick filter : ', filter)
+      if (filter === catElem[0]) {
+        filter = null
+        newLi.classList.remove('activ')
+        createArticle()
+      } else {
+        filter = catElem[0]
+        liElem.forEach( newLi => {
+          newLi.classList.remove('activ')
+        })
+      }
+      newLi.classList.add('activ')
       createArticle()
     })
     return newLi
@@ -126,7 +145,7 @@ const dateArticle = (articles) => {
 
 const fetchArticle = async () => {
   try {
-    const response = await fetch("https://restapi.fr/api/newArticle")
+    const response = await fetch(`https://restapi.fr/api/newArticle?sort=createdAt:${sortBy}`)
     articles = await response.json()
     createArticle()
     createMenuCategories()
