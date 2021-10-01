@@ -1,5 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  select {
+    display: none;
+    width: 10rem;
+    height: 6rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    background: white;
+    border: 0;
+    outline: 0;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+  }
+  .categories {
+    width: 20rem;
+    padding: 2rem 0;
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--box-shadow);
+    li {
+      padding: 0.7rem 3rem;
+      transition: color 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: var(--primary);
+        background-color: var(--light);
+        strong {
+          color: var(--primary);
+        }
+      }
+    }
+    .active {
+      color: var(--primary);
+      font-weight: 700;
+      strong {
+        color: var(--primary);
+      }
+    }
+  }
+}
+
 .articles {
-  margin: 5rem 0 0;
+  margin: 1rem 0 0;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -11,7 +63,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
     
     img {
       height: 6rem;
@@ -37,15 +89,6 @@
       white-space: pre-line;
       margin-top: 3rem;
       margin-bottom: 7rem;
-    }
-
-    .article-actions {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      padding: 2rem 0;
-      margin-top: 2rem;
-      border-top: 1px solid var(--divider);
     }
     
     .article-date {
