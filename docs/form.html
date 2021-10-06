@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="data:;base64,=">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/83f4286022.js" crossorigin="anonymous"></script>
+  <title>Form</title>
+<script defer src="form.bundle.js"></script><script defer src="topbar.bundle.js"></script></head>
+
+  <header>
+    <a href="./index.html" class="header-brand">Blog</a>
+    <div class="header-menu">
+      <ul>
+        <a href="./index.html" class="header-nav">
+          <li>
+            Home
+          </li>
+        </a>
+        <a href="./form.html" class="header-nav">
+          <li class="activ">
+            Add Article
+          </li>
+        </a>
+      </ul>
+      <div class="header-menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <form class="card">
+      <h2 class="title">Add New Article</h2>
+      <div class="form-group">
+        <label>Author</label>
+        <input type="text" name="author" >
+      </div>
+      <div class="form-group">
+        <label>Author Image Link</label>
+        <input type="text" name="imgAuthor" >
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <input type="text" name="category" >
+      </div>
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" name="title" >
+      </div>
+      <div class="form-group">
+        <label>Article</label>
+        <textarea type="text" name="content"></textarea>
+      </div>
+      <ul id="errors"></ul> 
+      <div class="btn-container">
+        <button type="button" class="btn btn-secondary">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>© blog</footer>
+</body>
+</html>

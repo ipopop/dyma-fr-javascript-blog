@@ -39,7 +39,7 @@ initForm()
 btnCancel.addEventListener('click', async () => {
   const result = await openModal('⚠️ 😱 Definitive discard of this article? 🤔 ⚠️')
   if (result) {
-    location.assign('/')
+    location.assign('https://ipopop.github.io/dyma-fr-javascript-blog/')
   }
 })
 
@@ -71,7 +71,7 @@ form.addEventListener('submit', async event => {
         console.log(body);
       }
       if (response.status <= 299) {
-        location.assign('/')
+        location.assign('https://ipopop.github.io/dyma-fr-javascript-blog/')
       }
     } catch (e) {
       console.error("e : ", e)

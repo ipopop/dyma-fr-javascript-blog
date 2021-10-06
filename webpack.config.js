@@ -12,7 +12,7 @@ module.exports = {
     topbar: path.join(__dirname, "src/assets/js/topbar.js")
   },
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "docs"),
     filename: "[name].bundle.js"
   },
   module: {
@@ -54,7 +54,7 @@ module.exports = {
   mode: "development",
   devServer: {
     open: false,
-    static: path.resolve(__dirname, './dist'),
+    static: path.resolve(__dirname, './docs'),
     port: 4000,
     historyApiFallback: {
       index: "/"

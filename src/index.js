@@ -54,7 +54,7 @@ const updateArticle = () => {
       try {
         const target = event.target
         const articleId = target.dataset.id
-        await location.assign(`/form.html?id=${ articleId }`)
+        await location.assign(`https://ipopop.github.io/dyma-fr-javascript-blog/form.html?id=${ articleId }`)
       } catch (e) {
         console.log('e : ', e)
       }
