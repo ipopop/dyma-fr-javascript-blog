@@ -21,7 +21,7 @@
     font-size: 1.3rem;
     color: var(--text-light);
     cursor: pointer;
-    border-radius: 1rem;
+    border-radius: var(--box-radius);
     border: 1px solid var(--border);
     box-shadow: var(--btn-shadow);
   }
@@ -30,7 +30,7 @@
     width: 20rem;
     padding: 0.7rem 0;
     background: white;
-    border-radius: 1rem;
+    border-radius: var(--box-radius);
     border: 1px solid var(--border);
     box-shadow: var(--btn-shadow);
     li {
@@ -73,7 +73,7 @@
     img {
       height: 6rem;
       width: 6rem;
-      border-radius: 50%;
+      border-radius: var(--circle-radius);
       margin-top: -3rem;
     }
 

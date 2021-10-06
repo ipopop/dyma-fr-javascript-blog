@@ -2,6 +2,7 @@
 
 import "../assets/styles/styles.scss"
 import './form.scss'
+import { openModal } from '../assets/js/modal'
 
 const form = document.querySelector('form')
 const errorElement = document.querySelector('#errors')
@@ -35,8 +36,11 @@ const initForm = async () => {
 }
 initForm()
 
-btnCancel.addEventListener('click', () => {
-  location.assign('/')
+btnCancel.addEventListener('click', async () => {
+  const result = await openModal('⚠️ 😱 Definitive discard of this article? 🤔 ⚠️')
+  if (result) {
+    location.assign('/')
+  }
 })
 
 form.addEventListener('submit', async event => {

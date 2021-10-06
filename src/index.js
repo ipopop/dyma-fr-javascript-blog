@@ -2,6 +2,7 @@
 
 import "./assets/styles/styles.scss"
 import "./index.scss"
+import { openModal } from './assets/js/modal'
 
 const newArticle = document.querySelector(".articles")
 const catMenuElem = document.querySelector(".categories")
@@ -65,22 +66,26 @@ const deleteArticle = async () => {
   const deleteBtn = newArticle.querySelectorAll('.btn-danger')
   deleteBtn.forEach(button => {
     button.addEventListener("click", async event => {
-      try {
-        const target = event.target
-        const articleId = target.dataset.id
-        const response = await fetch(
-          `https://restapi.fr/api/newArticle/${ articleId }`,
-          {
-            method: "DELETE"
-          }
-        )
-        const body = await response.json()
-        console.log('deleteArticle body : ', body)
-        setTimeout(() => {
-          location.reload()
-        }, 300)
-      } catch (e) {
-        console.log("e : ", e)
+      const result = await openModal('⚠️ 😱 Final deletion of this article? 🤔 ⚠️')
+      console.log(result)
+      if (result === true) {
+        try {
+          const target = event.target
+          const articleId = target.dataset.id
+          const response = await fetch(
+            `https://restapi.fr/api/newArticle/${ articleId }`,
+            {
+              method: "DELETE"
+            }
+          )
+          const body = await response.json()
+          console.log('deleteArticle body : ', body)
+          setTimeout(() => {
+            location.reload()
+          }, 300)
+        } catch (e) {
+          console.log("e : ", e)
+        }
       }
     })
   })

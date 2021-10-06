@@ -76,7 +76,7 @@ header {
     display: none;
     position: absolute;
     box-shadow: var(--btn-shadow);
-    border-radius: .5rem;
+    border-radius: var(--btn-radius);
     top: 7.5rem;
     right: 0;
     padding: 1rem 0;
@@ -123,7 +123,7 @@ header {
 
 .btn {
   border: 2px solid var(--border);
-  border-radius: .5rem;
+  border-radius: var(--btn-radius);
   padding: .8rem 1.8rem;
   font-weight: 700;
   cursor: pointer;
@@ -173,7 +173,7 @@ header {
   margin: 3rem 1rem;
   padding: 1.8rem 2.2rem;
   box-shadow: var(--box-shadow);
-  border-radius: 1rem;
+  border-radius: var(--box-radius);
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border);
@@ -182,4 +182,38 @@ header {
   background-repeat: no-repeat;
   background-size: auto auto;
   background-position: right bottom;
+}
+
+.calc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  .modal {
+    background: var(--bg);
+    min-width: 30rem;
+    border-radius: var(--box-radius);
+    padding: 1.2rem;
+    text-align: center;
+    
+    p {
+      margin: 1rem 0 1.5rem 0;
+      color: var(--error);
+    }
+
+    .btn {
+      margin-left: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    button {
+      box-shadow: none;
+    }
+  }
 }
